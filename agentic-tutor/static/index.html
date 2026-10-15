@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programming Learning Assistant</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Programming Learning Assistant</h1>
+    <p class="subtitle">A Socratic tutor for beginner Python — practice and debugging.</p>
+  </header>
+
+  <main>
+    <section id="chat" aria-live="polite"></section>
+
+    <div id="actions">
+      <button data-command="/hint">Hint</button>
+      <button data-command="/solution">Show solution</button>
+      <button data-command="/end">End exercise</button>
+      <button data-command="/profile">My progress</button>
+      <button data-command="/help">Help</button>
+    </div>
+
+    <form id="composer">
+      <textarea id="input" rows="3"
+        placeholder="Type here. Paste code or error messages directly. Shift+Enter for a new line."></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    This assistant analyses code by inspection — it does not run your code.
+    It stores a small learning profile on this computer only
+    (<code>/profile</code> to view, <code>/delete</code> to erase).
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
